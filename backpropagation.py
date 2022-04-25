@@ -14,11 +14,8 @@ def f(t):
     return 1 / (1 + np.exp(-t))
 
 
-# tutaj wersja bez wchodzenia jeszcze raz w funkcje bo jako argument dajemy x juz po przejsciu przez funkcje aktywacji,
-# czyli f(x * waga)
 def delta_f(t):
     return t * (1 - t)
-    # return f(t) * (1 - f(t))
 
 
 def plot_energy_histogram(energy_history, title_prefix):
@@ -80,6 +77,7 @@ def process_using_partial_energy_method():
 
     plot_energy_histogram(energy_history, "Metoda energii cząstkowej")
 
+
 def process_using_cumulative_energy_method():
     print("\n===================== PROCESSING USING CUMULATIVE ENERGY =====================\n")
     weights = np.copy(INITIAL_WEIGHTS)
@@ -135,6 +133,7 @@ def process_using_cumulative_energy_method():
     print(weights)
 
     plot_energy_histogram(energy_history, "Metoda energii całkowitej")
+
 
 def main():
     input("Press any key to start network processing using partial energy method : ")
