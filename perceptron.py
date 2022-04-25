@@ -63,7 +63,6 @@ if __name__ == '__main__':
 
     # AND
     weight = np.array([0.5, 0, 1])
-    # weight = np.array([0, 0, 0])
     inputs = np.array([
         [1, 0, 0],
         [1, 0, 1],
@@ -72,10 +71,9 @@ if __name__ == '__main__':
     ])
     expected_outputs = np.array([0, 0, 0, 1])
 
-    plot_decision_boundary(weight, inputs)
+    print("AND:")
     perceptron(weight, inputs, expected_outputs)
     bupa(weight, inputs, expected_outputs)
-
 
     # XOR
     weight = np.array([0, 0, 0, 0])
@@ -87,6 +85,6 @@ if __name__ == '__main__':
     ])
     expected_outputs = np.array([0, 1, 1, 0])
 
-    plot_decision_boundary(weight, inputs)
-    # bupa(weight, inputs, expected_outputs)
-    # perceptron(weight, inputs, expected_outputs)
+    print("======================\nXOR: ")
+    perceptron(weight, inputs, expected_outputs)
+    bupa(weight, inputs, expected_outputs)
